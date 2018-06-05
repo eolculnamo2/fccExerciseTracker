@@ -2,10 +2,7 @@ body{
     background-color: #efefef;
     color: #333;
 }
-h2{
-    text-align: center;
-}
-h4{
+h2, h4, p{
     text-align: center;
 }
 input{

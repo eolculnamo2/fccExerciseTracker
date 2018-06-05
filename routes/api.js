@@ -64,7 +64,9 @@ router.get('/exercise/log/:username?/:from?/:to?/:duration?',(req,res)=>{
     var duration = req.params.duration == null ? -1 : req.params.duration;
     
     User.findOne({username: req.params.username},(err,info)=>{
-        
+        if(err){
+            res.send("Invalid User")
+        }
         info.exercises.forEach((x)=>{
             var filter = true;
             
